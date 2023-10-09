@@ -4,11 +4,11 @@ const {
   getPrivateKey,
   getPublicKey,
   getEthAddress,
-} = require("./lib/generateEthAddress");
+} = require("../server/lib/generateEthAddress");
 
 const main = async () => {
   const output = [];
-  const outputPath = path.join(__dirname, "output.txt");
+  const outputPath = path.join(__dirname, "keys.txt");
   const numEthAddress = 3;
 
   for (let i = 0; i < numEthAddress; ++i) {

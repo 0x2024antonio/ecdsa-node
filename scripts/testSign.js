@@ -2,13 +2,13 @@ const {
   getPrivateKey,
   getPublicKey,
   getEthAddress,
-} = require("./lib/generateEthAddress");
+} = require("../server/lib/generateEthAddress");
 
 const {
   signMessage,
   isSigned,
   getRecoveredPublicKey,
-} = require("./lib/signMessage");
+} = require("../server/lib/signMessage");
 
 const { keccak256 } = require("ethereum-cryptography/keccak");
 const { utf8ToBytes, hexToBytes } = require("ethereum-cryptography/utils");
