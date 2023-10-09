@@ -4,11 +4,11 @@ This project is an example of using a client and server to facilitate transfers 
 
 However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
 
-### Video instructions
+### Updates from template
 
-For an overview of this project as well as getting started instructions, check out the following video:
-
-https://www.loom.com/share/0d3c74890b8e44a5918c4cacb3f646c4
+1. In server, addresses have been updated to real ethereum address (with checksum), and for demonstration purpose, private keys are attached alongside.
+2. In server, messageHash and signature will be received from the request. Ethereum address will be generated and check aginst the sender to validate the request.
+3. In client, messageHash and signature will be generated and sent to server.
 
 ### Client
 
@@ -35,9 +35,10 @@ _Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` 
 
 The scripts folder contains the scripts to
 
-1. Generate an Ethereum address
+1. Generate privateKey/publicKey/ethereumAddress to keys.txt
 
 - Run `node testGenerateEthAddress`
+- Run `node showKeys`
 
 2. Sign a message (by private key)
 
